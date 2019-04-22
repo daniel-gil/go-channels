@@ -2,10 +2,19 @@
 A channel is a communication mechanism that lets one goroutine send values to another goroutine.
 
 ## Create a channel
-To create a channel we have the `make` function:
+To create a channel we have the `make` function.
+
+### Creating an unbuffered channel
+Creates an unbuffered channel of channel's type `int`:
 ```go
-ch := make(chan int) // ch has type 'chan int'
+ch := make(chan int)
 ````
+
+### Creating an buffered channel
+Creates a buffered channel with capacity 2 of channel's type `int`:
+```go
+ch := make(chan int, 2) 
+```
 
 ## Unbuffered channel
 [Unbuffered channels](./unbuffered/) have no capacity and therefore require both goroutines to be ready to make any exchange. 
