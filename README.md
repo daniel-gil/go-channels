@@ -11,7 +11,7 @@ ch := make(chan int) // ch has type 'chan int'
 When we have finished writing into a channel we can close it. See [Closed channels](./closed-channels/). 
 
 ## nil channels
-[nil channels](./nil-channel/) are very useful for disabling a case in a select statement.
+[nil channels](./nil-channels/) are very useful for disabling a case in a select statement.
 
 ## References
 - `The Go Programming Language` by Brian Kernighan.
