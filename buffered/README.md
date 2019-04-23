@@ -50,6 +50,24 @@ Output
 fatal error: all goroutines are asleep - deadlock!
 ```
 
+## Capacity
+The capacity of a channel indicates how many elements is capable to hold the channel 
+before the sending operation blocks. The function `cap` returns the capacity of a channel:
+```go
+ch := make(chan int, 10)
+fmt.Println(cap(ch)) // "10"
+```
+
+## Length
+The function `len` returns the number of elements inside the channel:
+```go
+ch := make(chan int, 10)
+ch <- 10
+ch <- 20
+ch <- 30
+fmt.Println(len(ch)) // "3" 
+```
+
 ## References
 - [Go by Example: Channels](https://gobyexample.com/channels)
 - [The Nature Of Channels In Go](https://www.ardanlabs.com/blog/2014/02/the-nature-of-channels-in-go.html) by 
